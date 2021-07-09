@@ -12,6 +12,9 @@
 # 2. get the value of the matrix
 # 3. set the value of the inverse of the matrix
 # 4. get the value of the inverse of the matrix
+the super agginment operator does two things when set() is executed. 
+# Firstly, it assings the matrix to the x object in the parent environment and assigns the value of NULL to the inverse. 
+# This means whenever x is reset, the value cached in the memory of the object is cleared, which means for susbequent calls of cachemean(), a new and correct value of the mean is calculated. 
 makeCacheMatrix <- function(x = matrix()) {
 
 inv <- NULL
